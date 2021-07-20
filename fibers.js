@@ -11,7 +11,7 @@ if (process.fiberLib) {
 		((process.platform === 'linux') ? '-'+ detectLibc.family : ''), 'fibers');
 	try {
 		// Pull in fibers implementation
-		process.fiberLib = module.exports = require(modPath).Fiber;
+		process.fiberLib = module.exports = require('node-gyp-build')(__dirname).Fiber;
 	} catch (ex) {
 		// No binary!
 		console.error(

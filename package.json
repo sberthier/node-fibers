@@ -1,6 +1,6 @@
 {
 	"name": "fibers",
-	"version": "5.0.0",
+	"version": "5.0.0-bee.1",
 	"description": "Cooperative multi-tasking for Javascript",
 	"keywords": [
 		"fiber",
@@ -17,7 +17,7 @@
 	"author": "Marcel Laverdet <marcel@laverdet.com> (https://github.com/laverdet/)",
 	"main": "fibers",
 	"scripts": {
-		"install": "node build.js || nodejs build.js",
+		"install": "node-gyp-build",
 		"test": "node test.js || nodejs test.js"
 	},
 	"repository": {
@@ -29,6 +29,7 @@
 		"node": ">=10.0.0"
 	},
 	"dependencies": {
-		"detect-libc": "^1.0.3"
+		"detect-libc": "^1.0.3",
+		"node-gyp-build": "^4.2.3"
 	}
 }
